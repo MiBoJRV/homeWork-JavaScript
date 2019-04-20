@@ -9,7 +9,7 @@ let money, time;
 money = +prompt('Ваш бюджет на месяц?', '');
 time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
-// Обект с данными
+//  Обект с данными
 let appData = {
     budget: money,
     timeData: time,
@@ -19,7 +19,7 @@ let appData = {
     savings: false
 };
 
-// Цикл для двойного выведения вопроса
+//  Цикл для двойного выведения вопроса
 for (let i = 0; i < 2; i++) {
     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
         b = prompt('Во сколько обойдется?', '');
@@ -37,7 +37,7 @@ appData.moneyPerDay = appData.budget / 30;
 
 alert('Ежедневный бюджет: ' + appData.moneyPerDay);
 
-// Уровень достатка 
+//  Уровень достатка 
 
 if (appData.moneyPerDay < 100) {
     console.log("Минимальный уровень достатка");
