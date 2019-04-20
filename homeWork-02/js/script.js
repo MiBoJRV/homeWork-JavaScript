@@ -4,6 +4,8 @@
 /*jslint evil: true */
 // 'use strict';
 
+//Перевірка VScode
+
 let money, time;
 
 money = +prompt('Ваш бюджет на месяц?', '');
