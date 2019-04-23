@@ -78,11 +78,11 @@ let appData = {
         for (let i = 0; i < 1; i++) {
             let items = prompt("Что принесет дополнительный доход (Перечислите через запятую)", "");
     
-            if ((typeof (items)) === 'string' && (typeof (items)) != null && items != '') {
+            if (typeof(items) === 'string' && typeof(items) != null && items != '') {
                 console.log('Done');
                 
                 appData.income = items.split(', ');
-                appData.income.push(prompt('Может что-то еще?', ""));
+                appData.income.push(prompt('Может что-то еще?', ''));
                 appData.income.sort();
     
             } else {
