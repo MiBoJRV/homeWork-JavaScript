@@ -26,3 +26,11 @@ let newMenuList = document.createElement('li');  // новый пункт мен
 let ask = prompt('Ваше отношение к технике Apple', '');  // окошко с вопросом
 
     promptId.textContent = ask;  // записываю ответ в блок prompt на странице
+	
+	
+let createNewExpensesItem = document.createElement('input');  // новый пункт меню
+	
+let	addNewExpensesItem.classList.add('menu-item');  // новому пункту добавляю класс
+    newMenuList.textContent = 'Пятый пункт';  // и текст
+    menu.appendChild(newMenuList);  // вставляю в конец списка
+    menu.insertBefore(menuItem[2], menuItem[1]);  // восстановил порядок в меню
