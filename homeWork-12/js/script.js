@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //Tabs end
     // Timer
 
-    let deadline = '2019-04-27';
+    let deadline = '2019-04-26';
 
     function getTimeRemaining(endTime) {
         let t = Date.parse(endTime) - Date.parse(new Date()),
@@ -83,6 +83,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
                 if (t.total <= 0) {
                     clearInterval(timeInterval);
+
+                    if (t.total <= 0) {  // если время истекло, то останавливаю счётчик и записываю нули
+                        clearInterval(timeInterval);
+                        hours.textContent = '00';
+                        minutes.textContent = '00';
+                        seconds.textContent = '00';
+
+                      }
                 }
             }
     }
