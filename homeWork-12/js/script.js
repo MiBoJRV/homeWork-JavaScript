@@ -130,17 +130,18 @@ window.addEventListener('DOMContentLoaded', function() {
         request.setRequestHeader ('Content-Type', 'application/json; charset=utf-8'); // для json сервера
 
         //
-        let formData = new FormData(form);
+        let formData = new FormData(form);  // получаем всё, что ответил пользователь в форме
         // для json сервера
-        let obj = {};
+        // Для преобразования объекта в JSON воспользуемся данной конструкцией
+        let obj = {}; // новый объект, куда помещаем полученные данные
         formData.forEach(function(value, key) {
             obj[key] = value;
-        });
+        });// нужно запомнить данную конструкцию. ИСПОЛЬЗУЕТСЯ ЧАСТО!!!
         let json = JSON.stringify(obj);
         request.send(json);
         // для json сервера end
 
-        request.send(formData);
+        // request.send(formData);
 
         request.addEventListener('readystatechange', function(){
             if (request.readyState <4) {
@@ -153,7 +154,7 @@ window.addEventListener('DOMContentLoaded', function() {
         });
 
         //очистка формы после отправки
-        for (let i = 0; i < input.length; i++) {
+        for (let i = 0; i < input.length; i++) { // очищаем инпуты после отправки
             input[i].value = '';
         }
     });
